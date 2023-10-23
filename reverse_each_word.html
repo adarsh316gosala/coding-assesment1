@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseWordsWithoutBuiltInMethods(inputString) {
+  // Initialize an array to store the reversed words
+  let reversedWords = [];
+
+  // Initialize variables to track the start and end of a word
+  let wordStart = 0;
+  let wordEnd = 0;
+
+  for (let i = 0; i < inputString.length; i++) {
+    if (inputString[i] === ' ' || i === inputString.length - 1) {
+      // Found a word boundary (space) or reached the end of the string
+      wordEnd = i;
+      
+      // Extract the word
+      let word = inputString.slice(wordStart, i + 1);
+
+      // Reverse the word
+      let reversedWord = '';
+      for (let j = word.length - 1; j >= 0; j--) {
+        reversedWord += word[j];
+      }
+
+      // Add the reversed word to the array
+      reversedWords.push(reversedWord);
+
+      // Update the wordStart to the next character
+      wordStart = i + 1;
+    }
+  }
+
+  // Join the reversed words to form the final reversed string
+  let reversedString = reversedWords.join('');
+
+  return reversedString;
+}
+
+// Example usage:
+const inputString = "Hello World";
+const reversedString = reverseWordsWithoutBuiltInMethods(inputString);
+console.log(reversedString); // Output: "olleH dlroW"
+
+    </script>
+</body>
+</html>

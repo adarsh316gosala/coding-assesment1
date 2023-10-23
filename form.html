@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+   body{
+      width: 100%;
+      height: 400px;
+
+      
+      background-color: blue;
+
+      
+
+   }
+   #con{
+         width: 500px;
+         height: 500px;
+         position: relative;
+         left: 550px;
+         top: 40px;
+         padding-top: 20px;
+         background-color: white;
+         text-align: center;
+         
+    
+   }
+   h1{
+       text-align: center;
+       color: white;
+       padding-top: 25px;
+   }
+   #s{
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    
+   }
+#r{
+      position: relative;
+      left: 20px;
+      font-size: 20px;
+      background-color: black;
+      color: white;
+}
+</style>
+
+       
+
+</head>
+<body>
+    
+
+    <form>
+        <h1>Customer Survey Form</h1>
+    <div  id="con">
+        <label>FristName</label>
+
+        <input type="text" name="FristName" required >
+        <br><br>
+        <label id="e">LastName</label>
+        <input type="text">
+        <br><br>
+        <label>Date of Birth</label>
+        <input type="date" required>
+        <br><br><br>
+        <label>Country</label>
+        <select>
+
+            <option>select</option>
+            <option>Indian</option>
+             <option>Non-indian</option>
+
+        </select>
+        <br><br>
+        <label>Select Gender</label>
+        <br><br>
+<label>Male</label>
+        <input type="checkbox" name="male">
+        <label>Female</label>
+        <input type="checkbox" name="Female">
+        <label>Others</label>
+        <input type="checkbox" name="others">
+        <br><br>
+
+   <label>Email</label>
+   <input type="email"  name="Email" required>
+   <br><br>
+   <label>Mobile</label>
+   <input type="text" name="Mobile" required pattern="[0-9]{10}">
+
+   <br><br>
+   <input type="submit" value="Submit" id="s"> 
+   <input type="reset" id="r">
+    </div>
+    </form>
+</body>
+</html>
